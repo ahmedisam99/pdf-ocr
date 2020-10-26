@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>PDF Optical Character Recognition</title>
+  </head>
+  <body>
+    <form class="form">
+      <section class="form-sec">
+        <h3 class="header">Language of the document:</h3>
+        <label for="arRadio" class="label"
+          ><input id="arRadio" type="radio" name="lang" value="ara" />
+          Arabic</label
+        >
+        <label for="enRadio" class="label"
+          ><input id="enRadio" type="radio" name="lang" value="eng" />
+          English</label
+        >
+        <label for="bothRadio" class="label"
+          ><input
+            id="bothRadio"
+            type="radio"
+            name="lang"
+            value="ara+eng"
+            checked
+          />
+          Both (ar & en)</label
+        >
+      </section>
+
+      <section class="form-sec">
+        <h3 class="header">Quality of generated images:</h3>
+        <label for="720Radio" class="label"
+          ><input id="720Radio" type="radio" name="size" value="720" />
+          720p</label
+        >
+
+        <label for="1024Radio" class="label"
+          ><input
+            id="1024Radio"
+            type="radio"
+            name="size"
+            value="1024"
+            checked
+          />
+          1024p</label
+        >
+
+        <label for="1366Radio" class="label"
+          ><input id="1366Radio" type="radio" name="size" value="1366" />
+          1366p</label
+        >
+
+        <label for="1920Radio" class="label"
+          ><input id="1920Radio" type="radio" name="size" value="1920" />
+          1920p</label
+        >
+
+        <label for="4kRadio" class="label"
+          ><input id="4kRadio" type="radio" name="size" value="3840" />
+          4K</label
+        >
+
+        <label for="8kRadio" class="label"
+          ><input id="8kRadio" type="radio" name="size" value="7680" />
+          8K</label
+        >
+      </section>
+
+      <section class="form-sec">
+        <h3 class="header">Input File (PDF):</h3>
+        <input class="input in-input" type="text" name="inFile" disabled />
+        <button type="button" class="btn in-btn">Browse</button>
+      </section>
+
+      <section class="form-sec">
+        <h3 class="header">Output Directory:</h3>
+        <input class="input out-input" type="text" name="outDir" disabled />
+        <button type="button" class="btn out-btn">Browse</button>
+      </section>
+
+      <button type="submit" class="btn sub-btn">
+        <span class="sub-btn-txt">Convert</span>
+        <div class="loading-dots"></div>
+      </button>
+    </form>
+    <script src="./script.js"></script>
+  </body>
+</html>

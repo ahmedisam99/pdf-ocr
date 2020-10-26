@@ -1,0 +1,102 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('./Roboto-Regular.ttf') format('truetype');
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  padding: 15px 25px;
+  font-family: 'Roboto';
+}
+
+.header {
+  margin-bottom: 10px;
+}
+
+.form-sec {
+  margin-bottom: 25px;
+}
+
+.label {
+  margin-right: 50px;
+}
+
+.input {
+  width: 75%;
+  padding: 10px 5px;
+}
+
+.btn {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.in-btn {
+  width: 24%;
+  padding: 10px 0;
+}
+
+.out-btn {
+  width: 24%;
+  padding: 10px 0;
+}
+
+.sub-btn {
+  margin: 25px 0;
+  width: 99.5%;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.loading-dots {
+  display: none;
+  margin-left: 20px;
+  position: relative;
+  left: -9999px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #1010104d;
+  color: #1010104d;
+  box-shadow: 9984px 0 0 0 #1010104d, 9999px 0 0 0 #1010104d,
+    10014px 0 0 0 #1010104d;
+  animation: loadingDots 1.5s infinite linear;
+}
+
+@keyframes loadingDots {
+  0% {
+    box-shadow: 9984px 0 0 0 #1010104d, 9999px 0 0 0 #1010104d,
+      10014px 0 0 0 #1010104d;
+  }
+  16.667% {
+    box-shadow: 9984px -10px 0 0 #1010104d, 9999px 0 0 0 #1010104d,
+      10014px 0 0 0 #1010104d;
+  }
+  33.333% {
+    box-shadow: 9984px 0 0 0 #1010104d, 9999px 0 0 0 #1010104d,
+      10014px 0 0 0 #1010104d;
+  }
+  50% {
+    box-shadow: 9984px 0 0 0 #1010104d, 9999px -10px 0 0 #1010104d,
+      10014px 0 0 0 #1010104d;
+  }
+  66.667% {
+    box-shadow: 9984px 0 0 0 #1010104d, 9999px 0 0 0 #1010104d,
+      10014px 0 0 0 #1010104d;
+  }
+  83.333% {
+    box-shadow: 9984px 0 0 0 #1010104d, 9999px 0 0 0 #1010104d,
+      10014px -10px 0 0 #1010104d;
+  }
+  100% {
+    box-shadow: 9984px 0 0 0 #1010104d, 9999px 0 0 0 #1010104d,
+      10014px 0 0 0 #1010104d;
+  }
+}

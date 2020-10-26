@@ -1,0 +1,69 @@
+{
+  "name": "pdf-ocr",
+  "version": "1.0.0",
+  "description": "PDF Optical Character Recognition (OCR)",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron . --debug --icon=icons/app.ico",
+    "build": "electron-builder --win"
+  },
+  "author": "Ahmed I. Abdellatif",
+  "license": "MIT",
+  "dependencies": {
+    "node-notifier": "^8.0.0",
+    "pdf2img": "^0.5.0",
+    "temp": "^0.9.1"
+  },
+  "devDependencies": {
+    "electron": "^10.1.4",
+    "electron-builder": "^22.9.1"
+  },
+  "build": {
+    "appId": "com.enjna.pdfocr",
+    "productName": "PDF Optical Character Recognition",
+    "copyright": "Copyright © 2020 ${author}",
+    "directories": {
+      "output": "dist"
+    },
+    "extraResources": [
+      "icons/",
+      {
+        "from": "third-party/ImageMagick-7.0.10-34-portable-Q16-HDRI-x64/",
+        "to": "bin/"
+      },
+      {
+        "from": "third-party/GraphicsMagick-1.3.34-Q16/",
+        "to": "bin/"
+      },
+      {
+        "from": "third-party/Tesseract-OCR/",
+        "to": "bin/"
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "icons/app.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "perMachine": true,
+      "shortcutName": "PDF OCR",
+      "deleteAppDataOnUninstall": true,
+      "createStartMenuShortcut": true,
+      "artifactName": "${productName}-v${version}-win-x64.${ext}",
+      "installerIcon": "icons/installer.ico",
+      "license": "license.txt",
+      "include": "installer.nsh"
+    }
+  }
+}

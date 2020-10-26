@@ -1,0 +1,7 @@
+{
+  "step1": "Creating temp directory",
+  "step2": "Generating images from pdf file",
+  "step3": "Compinging generated images",
+  "step4": "Generating a searchable pdf file",
+  "step5": "Almost done, cleaning up my mess"
+}
