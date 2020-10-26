@@ -2,7 +2,7 @@
 
 ## Dependencies (third-party)
 
-- [GraphicsMagick](ftp://ftp.graphicsmagick.org/pub/GraphicsMagick/windows/)
+- [GraphicsMagick](http://www.graphicsmagick.org/download.html)
 - [Ghostscript](https://sourceforge.net/projects/ghostscript/files/GPL%20Ghostscript/9.09/gs909w64.exe/download)
 - [ImageMagick](https://imagemagick.org/script/download.php)
 - [Tesseract-OCR](https://github.com/tesseract-ocr/tesseract)
