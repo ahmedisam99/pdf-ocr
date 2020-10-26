@@ -14,4 +14,4 @@ An electron based windows applicatoin for the conversion of scanned pdf files an
 
 - GraphicsMagic, ImageMagick, and Tesseract-OCR are all pre-built with the app exept for Ghostscript which is a dependency of GraphicsMagic which i could not re-configure to consider the new path of the binaries of Ghostscript. **So it shall be installed seperatly**.
 
-- It bored me to read the docs of how to write an nsis script `(.nsh/.nsi)` in order to automatically update `%PATH%` environment variable. So it shall be updated manually (the path can be copied into clipboard from within the help submenu)
+- It bored me to read the docs of how to write an nsis script `(.nsh/.nsi)` in order to automatically update `%PATH%` environment variable. **So it shall be updated manually (the path can be copied into clipboard from within the help submenu)**.

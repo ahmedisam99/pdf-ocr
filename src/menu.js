@@ -1,5 +1,5 @@
 const { app, Menu, shell, clipboard } = require('electron');
-const { dirname } = require('path');
+const { dirname, join } = require('path');
 
 const menuBarTemplate = [
   {
@@ -21,14 +21,14 @@ const menuBarTemplate = [
         label: 'Copy bin path',
         accelerator: 'Ctrl+c',
         click() {
-          shell.openExternal('https://github.com/ahmedisam99/pdf-ocr');
+          clipboard.writeText(join(dirname(app.getAppPath()), 'bin'));
         },
       },
       {
         label: 'Source Code',
         accelerator: 'Ctrl+O',
         click() {
-          clipboard.writeText(dirname(app.getAppPath()));
+          shell.openExternal('https://github.com/ahmedisam99/pdf-ocr');
         },
       },
     ],
